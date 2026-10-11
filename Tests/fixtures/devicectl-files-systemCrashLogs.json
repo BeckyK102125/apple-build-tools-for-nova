@@ -1,0 +1,17 @@
+{
+  "info": { "outcome": "success" },
+  "result": {
+    "deviceIdentifier": "00000000-0000-0000-0000-000000000000",
+    "domain": { "type": "systemCrashLogs" },
+    "files": [
+      { "relativePath": "Retired/Sample Reader-2026-10-07-063830.ips", "metadata": { "extendedAttributes": { "bug_type": "309" } } },
+      { "relativePath": "Retired/Sample Reader.cpu_resource-2026-10-07-063626.ips", "metadata": { "extendedAttributes": { "bug_type": "202" } } },
+      { "relativePath": "Retired/Sample Reader.diskwrites_resource-2026-10-07-064709.ips", "metadata": { "extendedAttributes": { "bug_type": "145" } } },
+      { "relativePath": "Sample Reader-2026-10-08-101605.000.ips", "metadata": { "extendedAttributes": {} } },
+      { "relativePath": "Sample-2026-10-08-090000.ips", "metadata": { "extendedAttributes": { "bug_type": "309" } } },
+      { "relativePath": "App+ (Beta)-2026-10-08-120000.ips", "metadata": { "extendedAttributes": { "bug_type": "309" } } },
+      { "relativePath": "JetsamEvent-2026-10-09-172748.ips", "metadata": { "extendedAttributes": { "bug_type": "298" } } },
+      { "relativePath": "Sample Reader-notes.txt", "metadata": { "extendedAttributes": {} } }
+    ]
+  }
+}

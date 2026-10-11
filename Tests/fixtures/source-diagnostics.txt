@@ -1,0 +1,5 @@
+/repo/My App/Sources/File.swift:12:7: warning: This value is never used
+/repo/My App/Sources/File.swift:20:3: error: Cannot find 'missingValue' in scope
+CodeSign /repo/My App/BuildFixture.app failed
+ld: error: linker command failed with exit code 1
+error: package resolution failed

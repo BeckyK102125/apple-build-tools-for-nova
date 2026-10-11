@@ -1,0 +1,16 @@
+[
+  {
+    "target": "PosterApp",
+    "buildSettings": {
+      "PRODUCT_BUNDLE_IDENTIFIER": "com.example.poster",
+      "CODE_SIGN_STYLE": "Manual",
+      "DEVELOPMENT_TEAM": "TEAM123456",
+      "CODE_SIGN_IDENTITY": "Apple Distribution",
+      "CODE_SIGNING_ALLOWED": "YES",
+      "CODE_SIGNING_REQUIRED": "YES",
+      "PROVISIONING_PROFILE_SPECIFIER": "12345678-1234-1234-1234-123456789ABC",
+      "CODE_SIGN_ENTITLEMENTS": "PosterApp/PosterApp.entitlements",
+      "SDKROOT": "iphoneos"
+    }
+  }
+]

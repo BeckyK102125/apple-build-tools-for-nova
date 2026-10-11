@@ -1,0 +1,12 @@
+{
+  "name": "apple-build-tools-for-nova",
+  "version": "0.9.0",
+  "private": true,
+  "description": "Development scripts and tests for the Apple Build Tools for Nova extension.",
+  "license": "MIT",
+  "scripts": {
+    "check-js": "node scripts/check-js.js",
+    "test-js": "node --test Tests/*.test.js",
+    "test-swift": "swift test --package-path Swift && swift test --package-path Native/MarkdownReader"
+  }
+}

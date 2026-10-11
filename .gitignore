@@ -1,0 +1,5 @@
+.DS_Store
+.build/
+.nova/
+node_modules/
+AppleBuildTools.novaextension/Executables/

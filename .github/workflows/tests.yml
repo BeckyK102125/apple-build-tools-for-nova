@@ -1,0 +1,23 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check JavaScript
+        run: npm run check-js
+      - name: JavaScript tests
+        run: npm run test-js
+      - name: Swift tests
+        run: npm run test-swift
+      - name: Build the extension
+        run: scripts/build-extension.sh

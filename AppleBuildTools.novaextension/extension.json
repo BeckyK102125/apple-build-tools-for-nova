@@ -1,0 +1,205 @@
+{
+  "identifier": "io.github.beckyk102125.AppleBuildTools",
+  "name": "Apple Build Tools for Nova",
+  "organization": "BeckyK102125",
+  "description": "Build, run, and test Apple apps from Nova with VoiceOver-friendly choosers, app consoles, crash reports, and signing status.",
+  "version": "0.9.0",
+  "min_runtime": "14.0",
+  "categories": [
+    "commands",
+    "issues",
+    "tasks",
+    "sidebars"
+  ],
+  "bugs": "https://github.com/BeckyK102125/apple-build-tools-for-nova/issues",
+  "repository": "https://github.com/BeckyK102125/apple-build-tools-for-nova",
+  "license": "MIT",
+  "main": "main.js",
+  "activationEvents": [
+    "onWorkspaceContains:**/*.xcodeproj/project.pbxproj",
+    "onWorkspaceContains:**/*.xcworkspace/contents.xcworkspacedata",
+    "onCommand:apple-build.select-xcode",
+    "onCommand:apple-build.select-container",
+    "onCommand:apple-build.select-scheme",
+    "onCommand:apple-build.select-configuration",
+    "onCommand:apple-build.select-destination",
+    "onCommand:apple-build.refresh-choices",
+    "onCommand:apple-build.show-current-choices",
+    "onCommand:apple-build.refresh-project-navigator",
+    "onCommand:apple-build.refresh-signing-status",
+    "onCommand:apple-build.run-build",
+    "onCommand:apple-build.run-clean",
+    "onCommand:apple-build.run-tests",
+    "onCommand:apple-build.build-and-run",
+    "onCommand:apple-build.stop-action",
+    "onCommand:apple-build.show-app-console",
+    "onCommand:apple-build.show-app-reports"
+  ],
+  "config": [
+    {
+      "key": "appleBuild.announceProgress",
+      "title": "Announce choices and progress",
+      "type": "boolean",
+      "default": false,
+      "description": "Speak a short confirmation with the Mac voice when you save a build choice, when a build, clean, test, or Build and Run starts or moves to its next step, and when a console or report is ready. For people who do not use VoiceOver; off by default."
+    },
+    {
+      "key": "appleBuild.announceAppEvents",
+      "title": "Announce app crashes and errors",
+      "type": "boolean",
+      "default": false,
+      "description": "Speak with the Mac voice when the app you are running reports its first error, crashes, or quits. For people who do not use VoiceOver; off by default."
+    }
+  ],
+  "entitlements": {
+    "filesystem": "readonly",
+    "process": true
+  },
+  "commands": {
+    "extensions": [
+      {
+        "title": "Apple Build: Select Xcode",
+        "command": "apple-build.select-xcode"
+      },
+      {
+        "title": "Apple Build: Select Project or Workspace",
+        "command": "apple-build.select-container"
+      },
+      {
+        "title": "Apple Build: Select Scheme",
+        "command": "apple-build.select-scheme"
+      },
+      {
+        "title": "Apple Build: Select Configuration",
+        "command": "apple-build.select-configuration"
+      },
+      {
+        "title": "Apple Build: Select Destination",
+        "command": "apple-build.select-destination"
+      },
+      {
+        "title": "Apple Build: Refresh Build Choices",
+        "command": "apple-build.refresh-choices"
+      },
+      {
+        "title": "Apple Build: Show Current Build Choices",
+        "command": "apple-build.show-current-choices"
+      },
+      {
+        "title": "Apple Build: Refresh Project Navigator",
+        "command": "apple-build.refresh-project-navigator"
+      },
+      {
+        "title": "Apple Build: Open Selected Project Navigator File",
+        "command": "apple-build.open-project-navigator-file"
+      },
+      {
+        "title": "Apple Signing: Refresh Status",
+        "command": "apple-build.refresh-signing-status"
+      },
+      {
+        "title": "Apple Build: Run Build",
+        "command": "apple-build.run-build"
+      },
+      {
+        "title": "Apple Build: Run Clean",
+        "command": "apple-build.run-clean"
+      },
+      {
+        "title": "Apple Build: Run Tests",
+        "command": "apple-build.run-tests"
+      },
+      {
+        "title": "Apple Build: Build and Run",
+        "command": "apple-build.build-and-run"
+      },
+      {
+        "title": "Apple Build: Stop Current Action",
+        "command": "apple-build.stop-action"
+      },
+      {
+        "title": "Apple Build: Show App Console",
+        "command": "apple-build.show-app-console"
+      },
+      {
+        "title": "Apple Build: Show App Reports",
+        "command": "apple-build.show-app-reports"
+      }
+    ]
+  },
+  "sidebars": [
+    {
+      "id": "apple-build-project-navigator",
+      "name": "Apple Project Navigator",
+      "sections": [
+        {
+          "id": "apple-build-project-navigator",
+          "name": "Project Navigator",
+          "allowMultiple": false,
+          "placeholderText": "Select an Xcode project to show its source files.",
+          "headerCommands": [
+            {
+              "title": "Open",
+              "image": "__builtin.next",
+              "tooltip": "Open Selected Project Navigator File",
+              "command": "apple-build.open-project-navigator-file",
+              "when": "viewItem == 'file'"
+            },
+            {
+              "title": "Refresh",
+              "image": "__builtin.refresh",
+              "tooltip": "Refresh Project Navigator",
+              "command": "apple-build.refresh-project-navigator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apple-build-signing-status",
+      "name": "Apple Signing Status",
+      "sections": [
+        {
+          "id": "apple-build-signing-status",
+          "name": "Signing Status",
+          "allowMultiple": false,
+          "placeholderText": "Activate Refresh to check Apple signing status.",
+          "headerCommands": [
+            {
+              "title": "Refresh",
+              "image": "__builtin.refresh",
+              "tooltip": "Refresh Apple Signing Status",
+              "command": "apple-build.refresh-signing-status"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "issueMatchers": {
+    "apple-xcode-error-diagnostic": {
+      "linesStartAt1": true,
+      "columnsStartAt1": true,
+      "pattern": {
+        "regexp": "^(.+?):(\\d+):(\\d+):\\s+error:\\s+(.+)$",
+        "file": 1,
+        "line": 2,
+        "column": 3,
+        "severity": "error",
+        "message": 4
+      }
+    },
+    "apple-xcode-warning-diagnostic": {
+      "linesStartAt1": true,
+      "columnsStartAt1": true,
+      "pattern": {
+        "regexp": "^(.+?):(\\d+):(\\d+):\\s+warning:\\s+(.+)$",
+        "file": 1,
+        "line": 2,
+        "column": 3,
+        "severity": "warning",
+        "message": 4
+      }
+    }
+  }
+}

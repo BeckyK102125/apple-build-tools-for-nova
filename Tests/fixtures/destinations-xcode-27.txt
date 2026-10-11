@@ -1,0 +1,15 @@
+Destinations compatible with the "BuildFixture" scheme:
+    { platform:macOS, arch:arm64, id:MAC-ID, name:My Mac }
+    { platform:macOS, arch:arm64, variant:Mac Catalyst, id:MAC-ID, name:My Mac }
+    { platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+    { platform:iOS, arch:arm64, id:PHONE-A, name:Sam's iPhone }
+    { platform:macOS, name:Any Mac }
+    { platform:macOS, variant:Mac Catalyst, name:Any Mac }
+    { platform:iOS Simulator, id:SIM-A, OS:27.0, name:iPhone 17 }
+    { platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+    { platform:iOS Simulator, id:SIM-B, name:iPhone 18 Pro }
+    { platform:iOS Simulator, name:Simulator without ID }
+
+Destinations incompatible with the "BuildFixture" scheme:
+    { platform:iOS, id:OLD-A, name:Old iPhone, error:iOS 27.0 is not installed. }
+    { platform:iOS Simulator, id:SIM-OLD, OS:26.0, name:Old iPhone Simulator, error:iOS 26.0 is not installed. }
