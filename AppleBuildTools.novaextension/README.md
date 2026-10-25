@@ -11,6 +11,18 @@ Build, run, and test Apple apps from Nova on a Mac, with every step designed to 
 
 It needs macOS 14 or later, Xcode, and Nova. It is a Mac-only extension.
 
+## Screenshots
+
+These show a made-up app called Sample App.
+
+![The chooser window titled "Select a build destination". It lists Sample iPhone, My Mac, two iPhone Simulators, and Any iOS Device, with the first one selected, and Cancel and Choose buttons at the bottom.](https://raw.githubusercontent.com/BeckyK102125/apple-build-tools-for-nova/main/docs/screenshots/chooser.png)
+
+![A failed build report in Apple Build Reader. Its headings are Summary, Errors, Standard output, and Standard error. The Errors section comes first and lists two Swift errors with their file and line.](https://raw.githubusercontent.com/BeckyK102125/apple-build-tools-for-nova/main/docs/screenshots/build-report.png)
+
+![The App Console for Sample App on Sample iPhone in Apple Build Reader. The summary says the app crashed, with 1 error and 1 warning. Errors and warnings come before the full output, and the crash report is added at the end.](https://raw.githubusercontent.com/BeckyK102125/apple-build-tools-for-nova/main/docs/screenshots/app-console.png)
+
+![A crash report in Apple Build Reader. The "What happened" section explains the crash in one sentence, Details lists the app version, bundle ID, iPhone model, and iOS version, and Full report holds the original report.](https://raw.githubusercontent.com/BeckyK102125/apple-build-tools-for-nova/main/docs/screenshots/crash-report.png)
+
 ## Where to find everything
 
 All commands are in the **Extensions** menu, under **Apple Build Tools for Nova**. You never need Nova's command palette (Shift-Command-P), which VoiceOver cannot read. The extension adds no keyboard shortcuts of its own; you can add your own in Nova's settings.

@@ -16,6 +16,18 @@ Nova had no way to build and run Apple apps, and its command palette is invisibl
 
 The full guide is in [the extension's README](AppleBuildTools.novaextension/README.md). Nova also shows it in the Extension Library.
 
+## Screenshots
+
+These show a made-up app called Sample App.
+
+![The chooser window titled "Select a build destination". It lists Sample iPhone, My Mac, two iPhone Simulators, and Any iOS Device, with the first one selected, and Cancel and Choose buttons at the bottom.](docs/screenshots/chooser.png)
+
+![A failed build report in Apple Build Reader. Its headings are Summary, Errors, Standard output, and Standard error. The Errors section comes first and lists two Swift errors with their file and line.](docs/screenshots/build-report.png)
+
+![The App Console for Sample App on Sample iPhone in Apple Build Reader. The summary says the app crashed, with 1 error and 1 warning. Errors and warnings come before the full output, and the crash report is added at the end.](docs/screenshots/app-console.png)
+
+![A crash report in Apple Build Reader. The "What happened" section explains the crash in one sentence, Details lists the app version, bundle ID, iPhone model, and iOS version, and Full report holds the original report.](docs/screenshots/crash-report.png)
+
 ## Requirements
 
 - macOS 14 or later

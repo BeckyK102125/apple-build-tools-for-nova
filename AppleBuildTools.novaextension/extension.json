@@ -3,7 +3,7 @@
   "name": "Apple Build Tools for Nova",
   "organization": "BeckyK102125",
   "description": "Build, run, and test Apple apps from Nova with VoiceOver-friendly choosers, app consoles, crash reports, and signing status.",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "min_runtime": "14.0",
   "categories": [
     "commands",

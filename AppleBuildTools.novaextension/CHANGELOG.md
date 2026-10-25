@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.1
+
+- Screenshots in the README, each with a written description, for the Nova Extension Library listing. No changes to how the extension works.
+
 ## 0.9.0
 
 First public release, built from source.
